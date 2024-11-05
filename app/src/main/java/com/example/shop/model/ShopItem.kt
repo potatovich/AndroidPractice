@@ -1,10 +1,12 @@
 package com.example.shop.model
 
+import com.google.gson.annotations.SerializedName
+
 data class ShopItem (
-    val id: Int,
-    val title: String,
-    val price: String,
-    val category: String,
-    val description: String,
-    val image: String
+    @SerializedName("id") val id: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("price") val price: String,
+    @SerializedName("category") val category: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("image") val image: String
 )

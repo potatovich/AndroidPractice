@@ -20,12 +20,14 @@ import com.example.shop.model.ShopItemList
 
 @Composable
 fun Details(navController: NavHostController, shopItemList: ShopItemList) {
+    val shopItems = shopItemList.siList.value
+
     LazyColumn(modifier = Modifier
         .fillMaxSize()
         .padding(30.dp)){
 
-        items(shopItemList.shopItems.size) { id ->
-            val item = shopItemList.shopItems[id]
+        items(shopItems.size) { id ->
+            val item = shopItems[id]
             Box(
                 modifier = Modifier
                     .height(100.dp)
